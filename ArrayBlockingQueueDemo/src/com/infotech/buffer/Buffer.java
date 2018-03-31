@@ -5,8 +5,8 @@ import java.util.concurrent.BlockingQueue;
 
 //Shared class used by threads
 public class Buffer {
-	// SynchronousQueue
-	private BlockingQueue<Integer> blockingQueue = new ArrayBlockingQueue<Integer>(5);
+	// ArrayBlockingQueue
+	private BlockingQueue<Integer> blockingQueue = new ArrayBlockingQueue<Integer>(1);
 
 	public void get() {
 		// retrieve from synchronousQueue
