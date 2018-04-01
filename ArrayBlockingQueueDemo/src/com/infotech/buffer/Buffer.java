@@ -9,7 +9,7 @@ public class Buffer {
 	private BlockingQueue<Integer> blockingQueue = new ArrayBlockingQueue<Integer>(1);
 
 	public void get() {
-		// retrieve from synchronousQueue
+		// retrieve from ArrayBlockingQueue
 		try {
 			System.out.println("Consumer received - " + blockingQueue.take());
 		} catch (InterruptedException e) {
@@ -19,7 +19,7 @@ public class Buffer {
 
 	public void put(int data) {
 		try {
-			// putting in synchronousQueue
+			// putting in ArrayBlockingQueue
 			blockingQueue.put(data);
 			System.out.println("Producer produced - " + data);
 		} catch (InterruptedException e) {
